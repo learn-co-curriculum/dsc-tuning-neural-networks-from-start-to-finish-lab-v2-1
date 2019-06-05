@@ -3,11 +3,11 @@
 
 ## Introduction
 
-Now that we've discussed some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modelling pipeline.  
+Now that you've seen some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modelling pipeline.  
 
-With this pipeline, yoiu will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modelling decisions you are apt to encounter along the way.  
+With this pipeline, you will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modelling decisions you are apt to encounter along the way.  
 
-Recall that our end objective is to achieve a balance between overfitting and underfitting. We've discussed the bias variance tradeoff, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
+Recall that our end objective is to achieve a balance between overfitting and underfitting. You've seen the bias variance tradeoff, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
 
 ## Objectives
 
@@ -19,6 +19,8 @@ You will be able to:
 * Choose an appropriate optimization strategy 
 
 ## Loading the Data
+
+Load and preview the dataset below.
 
 
 ```python
@@ -318,6 +320,8 @@ X_train.head()
 ## Defining a K-fold Cross Validation Methodology
 
 Now that your have a complete holdout test set, write a function that takes in the remaining data and performs k-folds cross validation given a model object. 
+
+> Note: Think about how you will analyze the output of your models in order to select an optimal model. This may involve graphs, although alternative approaches are certainly feasible.
 
 
 ```python
@@ -962,7 +966,6 @@ print('Time Elapsed:', elapsed)
 
 ```python
 model.evaluate(X_test, y_test)
-
 ```
 
     4140/4140 [==============================] - 0s 42us/step
@@ -975,17 +978,10 @@ model.evaluate(X_test, y_test)
 
 
 
-## Additional Resources
+ 
 
-https://machinelearningmastery.com/dropout-regularization-deep-learning-models-keras/
-
-https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
-
-https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/
-
-https://stackoverflow.com/questions/37232782/nan-loss-when-training-regression-network
-https://www.springboard.com/blog/free-public-data-sets-data-science-project/
+  
 
 ## Summary
 
-In this lab, we investigated some data from *The Lending Club* in a complete data science pipeline regarding neural networks. We began with reserving a hold-out set for testing which never was touched during the modeling phase. From there, we implemented a k-fold cross validation methodology in order to assess an initial baseline model and various regularization methods. From here, we'll begin to investigate other neural network architectures such as CNNs.
+In this lab, you investigated some data from *The Lending Club* in a complete data science pipeline regarding neural networks. You began with reserving a hold-out set for testing which never was touched during the modeling phase. From there, you implemented a k-fold cross validation methodology in order to assess an initial baseline model and various regularization methods. From here, you'll begin to investigate other neural network architectures such as CNNs.
