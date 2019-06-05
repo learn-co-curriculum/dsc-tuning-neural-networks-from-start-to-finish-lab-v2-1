@@ -3,11 +3,11 @@
 
 ## Introduction
 
-Now that we've discussed some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modelling pipeline.  
+Now that you've seen some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modelling pipeline.  
 
-With this pipeline, yoiu will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modelling decisions you are apt to encounter along the way.  
+With this pipeline, you will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modelling decisions you are apt to encounter along the way.  
 
-Recall that our end objective is to achieve a balance between overfitting and underfitting. We've discussed the bias variance tradeoff, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
+Recall that our end objective is to achieve a balance between overfitting and underfitting. You've seen the bias variance tradeoff, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
 
 ## Objectives
 
@@ -20,6 +20,8 @@ You will be able to:
 
 ## Loading the Data
 
+Load and preview the dataset below.
+
 
 ```python
 #Your code here; load and preview the dataset
@@ -27,9 +29,9 @@ You will be able to:
 
 ## Defining the Problem
 
-Set up the problem by defining X and Y. 
+Set up the problem by defining X and y. 
 
-For this problem use the following variables for X:
+For this problem use the following variablea for X:
 * loan_amnt
 * home_ownership
 * funded_amnt_inv
@@ -38,9 +40,7 @@ For this problem use the following variables for X:
 * installment
 * annual_inc
 
-Be sure to use dummy variables for categorical variables and to normalize numerical quanitities. Be sure to also remove any rows with null data.  
-
-For Y, we are looking to build a model to predict the total payment received for a loan.
+Be sure to use dummy variables for categorical variables and to normalize numerical quanitities. Be sure to also remove any rows with null data.
 
 
 ```python
@@ -58,7 +58,9 @@ While we will be using K-fold cross validation to select an optimal model, we st
 
 ## Defining a K-fold Cross Validation Methodology
 
-Now that your have a complete holdout test set, write a function that takes in the remaining data and performs k-folds cross validation given a model object. Be sure your function returns performance metrics regarding the training and validation sets.
+Now that your have a complete holdout test set, write a function that takes in the remaining data and performs k-folds cross validation given a model object. 
+
+> Note: Think about how you will analyze the output of your models in order to select an optimal model. This may involve graphs, although alternative approaches are certainly feasible.
 
 
 ```python
@@ -69,11 +71,7 @@ def k_folds(features_train, labels_train, model_obj, k=10, n_epochs=100):
 
 ## Building a Baseline Model
 
-Here, it is also important to define your evaluation metric that you will look to optimize while tuning the model.   
-
-In general, model training to optimize this metric may consist of using a validation and test set if data is plentiful, or k-folds cross-validation if data is limited. We set up a k-folds cross-validation for this task since the dataset is not overly large.  
-
-Build an initial sequential model with 2 hidden relu layers. The first should have 7 hidden units, and the second 10 hidden units. Finally, add a third layer with a linear activation function to output our predictions for the total loan payment. 
+Here, it is also important to define your evaluation metric that you will look to optimize while tuning the model. Additionally, model training to optimize this metric may consist of using a validation and test set if data is plentiful, or k-folds cross-validation if data is limited. Since this dataset is not overly large, it will be most appropriate to set up a k-folds cross-validation  
 
 
 ```python
@@ -110,16 +108,7 @@ Now that you've developed a baseline model, its time to intentionally overfit a 
 * Make the layers bigger
 * Increase the number of training epochs
 
-Again, be careful here. Think about the limitations of your resources, both in terms of your computers specs and how much time and patience you have to let the process run. Also keep in mind that you will then be regularizing these overfit models, meaning another round of experiments and more time and resources.  
-
-For example, here are some timing notes on potential experiments run on a Macbook Pro 3.1 GHz Intel Core i5 with 16gb of RAM:
-
-* Using our 10 fold cross validation methodology, a 5-layer neural network with 10 units per hidden layer and 100 epochs took approximately 15 minutes to train and validate  
-
-* Using our 10 fold cross validation methodology, a 5-layer neural network with 25 units per hidden layer and 100 epochs took approximately 25 minutes to train and validate  
-
-* Using our 10 fold cross validation methodology, a 5-layer neural network with 10 units per hidden layer and 250 epochs took approximately 45 minutes to train and validate
-
+Again, be careful here. Think about the limitations of your resources, both in terms of your computers specs and how much time and patience you have to let the process run. Also keep in mind that you will then be regularizing these overfit models, meaning another round of experiments and more time and resources.
 
 
 ```python
@@ -176,17 +165,10 @@ Now that you have selected a network architecture, tested various regularization
 #Your code here; final model training on entire training set followed by evaluation on hold-out data
 ```
 
-## Additional Resources
+ 
 
-https://machinelearningmastery.com/dropout-regularization-deep-learning-models-keras/
-
-https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/
-
-https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/
-
-https://stackoverflow.com/questions/37232782/nan-loss-when-training-regression-network
-https://www.springboard.com/blog/free-public-data-sets-data-science-project/
+  
 
 ## Summary
 
-In this lab, we investigated some data from *The Lending Club* in a complete data science pipeline regarding neural networks. We began with reserving a hold-out set for testing which never was touched during the modeling phase. From there, we implemented a k-fold cross validation methodology in order to assess an initial baseline model and various regularization methods. From here, we'll begin to investigate other neural network architectures such as CNNs.
+In this lab, you investigated some data from *The Lending Club* in a complete data science pipeline regarding neural networks. You began with reserving a hold-out set for testing which never was touched during the modeling phase. From there, you implemented a k-fold cross validation methodology in order to assess an initial baseline model and various regularization methods. From here, you'll begin to investigate other neural network architectures such as CNNs.
