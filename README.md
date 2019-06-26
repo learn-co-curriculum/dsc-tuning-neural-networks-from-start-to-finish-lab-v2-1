@@ -3,17 +3,17 @@
 
 ## Introduction
 
-Now that you've seen some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modelling pipeline.  
+Now that you've seen some regularization, initialization and optimization techniques, its time to synthesize those concepts into a cohesive modeling pipeline.  
 
-With this pipeline, you will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modelling decisions you are apt to encounter along the way.  
+With this pipeline, you will not only fit an initial model but will also attempt to set various hyperparameters for regularization techniques. Your final model selection will pertain to the test metrics across these models. This will more naturally simulate a problem you might be faced with in practice, and the various modeling decisions you are apt to encounter along the way.  
 
-Recall that our end objective is to achieve a balance between overfitting and underfitting. You've seen the bias variance tradeoff, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
+Recall that our end objective is to achieve a balance between overfitting and underfitting. You've seen the bias variance trade-off, and the role of regularization in order to reduce overfitting on training data and improving generalization to new cases. Common frameworks for such a procedure include train/validate/test methodology when data is plentiful, and K-folds cross-validation for smaller, more limited datasets. In this lab, you'll perform the latter, as the dataset in question is fairly limited. 
 
 ## Objectives
 
 You will be able to:
 
-* Implement a K-folds cross validation modelling pipeline
+* Implement a K-folds cross validation modeling pipeline
 * Apply normalization as a preprocessing technique
 * Apply regularization techniques to improve your model's generalization
 * Choose an appropriate optimization strategy 
@@ -31,7 +31,7 @@ Load and preview the dataset below.
 
 Set up the problem by defining X and y. 
 
-For this problem use the following variablea for X:
+For this problem use the following variables for X:
 * loan_amnt
 * home_ownership
 * funded_amnt_inv
@@ -40,7 +40,7 @@ For this problem use the following variablea for X:
 * installment
 * annual_inc
 
-Be sure to use dummy variables for categorical variables and to normalize numerical quanitities. Be sure to also remove any rows with null data.
+Be sure to use dummy variables for categorical variables and to normalize numerical quantities. Be sure to also remove any rows with null data.
 
 
 ```python
@@ -49,7 +49,7 @@ Be sure to use dummy variables for categorical variables and to normalize numeri
 
 ## Generating a Hold Out Test Set
 
-While we will be using K-fold cross validation to select an optimal model, we still want a final hold out test set that is completely independent of any modelling decisions. As such, pull out a sample of 10% of the total available data. For consistency of results, use random seed 123. 
+While we will be using K-fold cross validation to select an optimal model, we still want a final hold out test set that is completely independent of any modeling decisions. As such, pull out a sample of 10% of the total available data. For consistency of results, use random seed 123. 
 
 
 ```python
@@ -158,7 +158,7 @@ Notes:
 
 ## Final Evaluation
 
-Now that you have selected a network architecture, tested various regularization procedures and tuned hyperparameters via a validation methodology, it is time to evaluate your finalized model once and for all. Fit the model using all of the training and validation data using the architecture and hyperparameters that were most effective in your expirements above. Afterwards, measure the overall performance on the hold-out test data which has been left untouched (and hasn't leaked any data into the modelling process)!
+Now that you have selected a network architecture, tested various regularization procedures and tuned hyperparameters via a validation methodology, it is time to evaluate your finalized model once and for all. Fit the model using all of the training and validation data using the architecture and hyperparameters that were most effective in your experiments above. Afterwards, measure the overall performance on the hold-out test data which has been left untouched (and hasn't leaked any data into the modeling process)!
 
 
 ```python
