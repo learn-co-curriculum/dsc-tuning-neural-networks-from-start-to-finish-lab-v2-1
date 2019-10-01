@@ -24,7 +24,7 @@ Load and preview the dataset below.
 
 
 ```python
-#Your code here; load and preview the dataset
+# Your code here; load and preview the dataset
 import pandas as pd
 
 data = pd.read_csv("loan_final.csv", header=0)
@@ -325,7 +325,7 @@ Now that your have a complete holdout test set, write a function that takes in t
 
 
 ```python
-#Your code here; define a function to evaluate a model object using K folds cross validation.
+# Your code here; define a function to evaluate a model object using K folds cross validation.
 from sklearn.model_selection import KFold
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -416,7 +416,7 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#Your code here; use your k-folds function to evaluate the baseline model.
+# Your code here; use your k-folds function to evaluate the baseline model.
 import time
 import datetime
 
@@ -459,9 +459,9 @@ Again, be careful here. Think about the limitations of your resources, both in t
 
 
 ```python
-#Your code here
-#Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
-#a 5-layer neural network with 10 units per hidden layer and 100 epochs took ~15 minutes to train and validate
+# Your code here
+# Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
+# a 5-layer neural network with 10 units per hidden layer and 100 epochs took ~15 minutes to train and validate
 
 now = datetime.datetime.now()
 
@@ -502,10 +502,10 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#Model Mod 2: More Layers and Bigger Layers
-#Your code here
-#Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
-#a 5-layer neural network with 25 units per hidden layer and 100 epochs took ~25 minutes to train and validate
+# Model Mod 2: More Layers and Bigger Layers
+# Your code here
+# Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
+# a 5-layer neural network with 25 units per hidden layer and 100 epochs took ~25 minutes to train and validate
 
 now = datetime.datetime.now()
 
@@ -545,9 +545,9 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#Model Mod 3: More Layers, More Epochs 
-#Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
-#a 5-layer neural network with 10 units per hidden layer and 250 epochs took ~45 minutes to train and validate
+# Model Mod 3: More Layers, More Epochs 
+# Timing Notes: On a top of the line mac-book pro, using our 10 fold cross validation methodology,
+# a 5-layer neural network with 10 units per hidden layer and 250 epochs took ~45 minutes to train and validate
 
 now = datetime.datetime.now()
 
@@ -598,7 +598,7 @@ Notes:
 
 
 ```python
-#L1 Regularization
+# L1 Regularization
 from keras import regularizers
 
 #kernel_regularizer=regularizers.l1(0.005)
@@ -644,7 +644,7 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#L2 Regularization and Early Stopping
+# L2 Regularization and Early Stopping
 now = datetime.datetime.now()
 
 
@@ -684,7 +684,7 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#Dropout and Early Stopping
+# Dropout and Early Stopping
 from keras import layers
 
 now = datetime.datetime.now()
@@ -729,7 +729,7 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#L1, Dropout and Early Stopping
+# L1, Dropout and Early Stopping
 
 now = datetime.datetime.now()
 
@@ -787,11 +787,11 @@ Now that you have selected a network architecture, tested various regularization
 
 
 ```python
-#Your code here; final model training on entire training set followed by evaluation on hold-out data
+# Your code here; final model training on entire training set followed by evaluation on hold-out data
 
-#Based on our model runs above, it appears that using  L2 Regularization and Early Stopping
-#improves our variance 10 fold in exchange for a slight increase in MSE
-#As such, we will choose this as our final model in hopes that the model will have improved generalization
+# Based on our model runs above, it appears that using  L2 Regularization and Early Stopping
+# improves our variance 10 fold in exchange for a slight increase in MSE
+# As such, we will choose this as our final model in hopes that the model will have improved generalization
 now = datetime.datetime.now()
 
 
@@ -977,10 +977,6 @@ model.evaluate(X_test, y_test)
     [0.18712875352101627, 0.1803887076495926]
 
 
-
- 
-
-  
 
 ## Summary
 
