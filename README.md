@@ -24,7 +24,7 @@ Load and preview the dataset below.
 
 
 ```python
-#Your code here; load and preview the dataset
+# Your code here; load and preview the dataset
 ```
 
 ## Defining the Problem
@@ -64,9 +64,10 @@ Now that your have a complete holdout test set, write a function that takes in t
 
 
 ```python
-#Your code here; define a function to evaluate a model object using K folds cross validation.
+# Your code here; define a function to evaluate a model object using K folds cross validation.
 
 def k_folds(features_train, labels_train, model_obj, k=10, n_epochs=100):
+    pass
 ```
 
 ## Building a Baseline Model
@@ -75,7 +76,7 @@ Here, it is also important to define your evaluation metric that you will look t
 
 
 ```python
-#Your code here; define and compile an initial model as described
+# Your code here; define and compile an initial model as described
 ```
 
 ## Evaluating the Baseline Model with K-Folds Cross Validation
@@ -98,7 +99,8 @@ print('Time Elapsed:', elapsed)
 
 
 ```python
-#Your code here; use your k-folds function to evaluate the baseline model.
+# Your code here; use your k-folds function to evaluate the baseline model.
+# ⏰ This cell may take several mintes to run
 ```
 
 ## Intentionally Overfitting a Model
@@ -112,17 +114,20 @@ Again, be careful here. Think about the limitations of your resources, both in t
 
 
 ```python
-#Your code here; try some methods to overfit your network
+# Your code here; try some methods to overfit your network
+# ⏰ This cell may take several mintes to run
 ```
 
 
 ```python
-#Your code here; try some methods to overfit your network
+# Your code here; try some methods to overfit your network
+# ⏰ This cell may take several mintes to run
 ```
 
 
 ```python
-#Your code here; try some methods to overfit your network
+# Your code here; try some methods to overfit your network
+# ⏰ This cell may take several mintes to run
 ```
 
 ## Regularizing the Model to Achieve Balance  
@@ -138,22 +143,26 @@ Notes:
 
 
 ```python
-#Your code here; try some regularization or other methods to tune your network
+# Your code here; try some regularization or other methods to tune your network
+# ⏰ This cell may take several mintes to run
 ```
 
 
 ```python
-#Your code here; try some regularization or other methods to tune your network
+# Your code here; try some regularization or other methods to tune your network
+# ⏰ This cell may take several mintes to run
 ```
 
 
 ```python
-#Your code here; try some regularization or other methods to tune your network
+# Your code here; try some regularization or other methods to tune your network
+# ⏰ This cell may take several mintes to run
 ```
 
 
 ```python
-#Your code here; try some regularization or other methods to tune your network
+# Your code here; try some regularization or other methods to tune your network
+# ⏰ This cell may take several mintes to run
 ```
 
 ## Final Evaluation
@@ -162,12 +171,9 @@ Now that you have selected a network architecture, tested various regularization
 
 
 ```python
-#Your code here; final model training on entire training set followed by evaluation on hold-out data
+# Your code here; final model training on entire training set followed by evaluation on hold-out data
+# ⏰ This cell may take several mintes to run
 ```
-
- 
-
-  
 
 ## Summary
 
