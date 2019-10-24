@@ -48,11 +48,11 @@ For this problem use the following variables for X:
 * installment
 * annual_inc
 
-Be sure to use one hot encode categorical variables and to normalize numerical quantities. Be sure to also remove any rows with null data.
+Our target variable y will be ```total_pymnt```
 
 
 ```python
-# Your code here; appropriately define X and Y
+# Your code here; appropriately define X and y
 import numpy as np
 
 features = ['loan_amnt', 'funded_amnt_inv', 'installment', 'annual_inc', 'home_ownership', 'verification_status', 'emp_length']
