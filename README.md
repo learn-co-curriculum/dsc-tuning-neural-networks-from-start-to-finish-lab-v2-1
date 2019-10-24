@@ -40,11 +40,11 @@ For this problem use the following variables for X:
 * installment
 * annual_inc
 
-Be sure to use dummy variables for categorical variables and to normalize numerical quantities. Be sure to also remove any rows with null data.
+Be sure to use one hot encode categorical variables and to normalize numerical quantities. Be sure to also remove any rows with null data.
 
 
 ```python
-# Your code here; appropriately define X and Y using dummy variables and normalization for preprocessing.
+# Your code here; appropriately define X and Y and apply a trian test split
 ```
 
 ## Generating a Hold Out Test Set
@@ -54,6 +54,25 @@ While we will be using K-fold cross validation to select an optimal model, we st
 
 ```python
 # Your code here; generate a hold out test set for final model evaluation. Use random seed 123.
+```
+
+### Preprocessing Steps
+* Fill in missing values with SimpleImputer
+* Standardize continuous features with StandardScalar()
+* One hot encode categorical features with OneHotEncoder()
+
+
+```python
+
+```
+
+### Preprocess Your Holdout Set
+
+Make sure to use your StandardScalar and OneHotEncoder that you already fit on the training set to transform your test set
+
+
+```python
+
 ```
 
 ## Defining a K-fold Cross Validation Methodology
