@@ -1,4 +1,3 @@
-
 # Tuning and Optimizing Neural Networks - Lab
 
 ## Introduction
@@ -139,7 +138,7 @@ X_train_ohe = None
 X_test_ohe = None
 
 # Get all categorical feature names
-cat_columns = ohe.get_feature_names(input_features=X_train_ohe.columns)
+cat_columns = ohe.get_feature_names_out(input_features=X_train_ohe.columns)
 
 # Fit and transform the training data
 X_train_categorical = None
