@@ -1,4 +1,3 @@
-
 # Tuning and Optimizing Neural Networks - Lab
 
 ## Introduction
@@ -368,7 +367,7 @@ X_train_ohe = None
 X_test_ohe = None
 
 # Get all categorical feature names
-cat_columns = ohe.get_feature_names(input_features=X_train_ohe.columns)
+cat_columns = ohe.get_feature_names_out(input_features=X_train_ohe.columns)
 
 # Fit and transform the training data
 X_train_categorical = None
@@ -397,7 +396,7 @@ X_train_ohe = ohe.fit_transform(X_train_cat)
 X_test_ohe = ohe.transform(X_test_cat)
 
 # Get all categorical feature names
-cat_columns = ohe.get_feature_names(input_features=X_train_cat.columns)
+cat_columns = ohe.get_feature_names_out(input_features=X_train_cat.columns)
 
 # Fit and transform the training data
 X_train_categorical = pd.DataFrame(X_train_ohe.todense(), columns=cat_columns)
@@ -615,7 +614,7 @@ baseline_preds = None
 ```python
 # __SOLUTION__ 
 # Convert the predictions back to original scale
-baseline_preds = ss_y.inverse_transform(cv_baseline_preds)
+baseline_preds = ss_y.inverse_transform(cv_baseline_preds.reshape(-1, 1))
 
 # RMSE on train data (original scale)
 np.sqrt(mean_squared_error(y_train, baseline_preds))
