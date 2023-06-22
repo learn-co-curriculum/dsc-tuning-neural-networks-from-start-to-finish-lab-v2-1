@@ -33,7 +33,7 @@ from sklearn.model_selection import cross_val_predict
 from keras import models
 from keras import layers
 from keras import regularizers
-from keras.wrappers.scikit_learn import KerasRegressor
+from scikeras.wrappers import KerasRegressor
 ```
 
 
@@ -50,7 +50,7 @@ from sklearn.model_selection import cross_val_predict
 from keras import models
 from keras import layers
 from keras import regularizers
-from keras.wrappers.scikit_learn import KerasRegressor
+from scikeras.wrappers import KerasRegressor
 ```
 
     Using TensorFlow backend.
