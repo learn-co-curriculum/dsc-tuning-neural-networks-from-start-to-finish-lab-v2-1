@@ -547,7 +547,7 @@ Use `cross_val_predict()` to generate cross-validated predictions with:
 
 
 ```python
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 # Generate cross-validated predictions
 np.random.seed(123)
 cv_baseline_preds = None
@@ -556,7 +556,7 @@ cv_baseline_preds = None
 
 ```python
 # __SOLUTION__ 
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 # Generate cross-validated predictions
 np.random.seed(123)
 cv_baseline_preds = cross_val_predict(keras_wrapper_1, X_train_all, y_train_scaled, cv=5)
