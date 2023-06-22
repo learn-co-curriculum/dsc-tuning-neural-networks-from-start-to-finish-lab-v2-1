@@ -228,7 +228,7 @@ Use `cross_val_predict()` to generate cross-validated predictions with:
 
 
 ```python
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 # Generate cross-validated predictions
 np.random.seed(123)
 cv_baseline_preds = None
@@ -279,7 +279,7 @@ keras_wrapper_2 = None
 
 
 ```python
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 # Generate cross-validated predictions
 np.random.seed(123)
 cv_bigger_model_preds = None
@@ -316,7 +316,7 @@ keras_wrapper_3 = None
 
 
 ```python
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 # Generate cross-validated predictions
 np.random.seed(123)
 cv_dropout_preds = None
@@ -334,7 +334,7 @@ Now that you have selected a network architecture, tested various regularization
 
 
 ```python
-# ⏰ This cell may take several mintes to run
+# ⏰ This cell may take several mintes to run and you may get a comment from tf about optimizing your machine
 ```
 
 
